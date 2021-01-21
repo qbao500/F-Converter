@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    tools:context=".Currency">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Currency"
+        android:textSize="28dp" />
+
+    <EditText
+        android:id="@+id/usd"
+        android:layout_margin="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/USD"
+        android:hint="Dollar"
+        android:inputType="numberDecimal"
+        android:onClick="dollarConvert"
+        android:imeOptions="actionGo"/>
+
+    <TextView
+        android:id="@+id/USD"
+        android:layout_margin="25dp"
+        android:layout_alignBaseline="@+id/usd"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="USD"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/euro"
+        android:layout_margin="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/usd"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/EURO"
+        android:hint="Euro"
+        android:inputType="numberDecimal"
+        android:onClick="euroConvert"
+        android:imeOptions="actionGo"/>
+
+    <TextView
+        android:id="@+id/EURO"
+        android:layout_margin="25dp"
+        android:layout_alignBaseline="@+id/euro"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/usd"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="EUR"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/dong"
+        android:layout_margin="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/euro"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/DONG"
+        android:hint="Đồng"
+        android:inputType="numberDecimal"
+        android:onClick="dongConvert"
+        android:imeOptions="actionGo"/>
+
+    <TextView
+        android:id="@+id/DONG"
+        android:layout_margin="25dp"
+        android:layout_alignBaseline="@+id/dong"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/euro"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="VND"
+        android:textSize="18sp" />
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_below="@id/dong"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="hideKeyboard" />
+
+
+</RelativeLayout>

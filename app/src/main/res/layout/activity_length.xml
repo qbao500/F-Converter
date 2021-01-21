@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    tools:context=".Length">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Length"
+        android:textSize="28dp" />
+
+    <EditText
+        android:id="@+id/met"
+        android:layout_margin="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/MET"
+        android:hint="Meters"
+        android:inputType="numberDecimal"
+        android:onClick="metConvert"
+        android:imeOptions="actionGo"/>
+
+    <TextView
+        android:id="@+id/MET"
+        android:layout_margin="25dp"
+        android:layout_alignBaseline="@+id/met"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="m"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/ft"
+        android:layout_margin="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/met"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/FT"
+        android:hint="Feet"
+        android:inputType="numberDecimal"
+        android:onClick="ftConvert"
+        android:imeOptions="actionGo"/>
+
+    <TextView
+        android:id="@+id/FT"
+        android:layout_margin="25dp"
+        android:layout_alignBaseline="@+id/ft"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/met"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="ft"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/in"
+        android:layout_margin="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ft"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/IN"
+        android:hint="Inches"
+        android:inputType="numberDecimal"
+        android:onClick="inConvert"
+        android:imeOptions="actionGo"/>
+
+    <TextView
+        android:id="@+id/IN"
+        android:layout_margin="25dp"
+        android:layout_alignBaseline="@+id/in"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ft"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="in"
+        android:textSize="18sp" />
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_below="@id/in"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="hideKeyboard"/>
+
+
+</RelativeLayout>

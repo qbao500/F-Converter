@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    tools:context=".Speed">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Speed"
+        android:textSize="28dp" />
+
+    <EditText
+        android:id="@+id/kmh"
+        android:layout_margin="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/KMH"
+        android:hint="Km per hour"
+        android:inputType="numberDecimal"
+        android:onClick="kmhConvert"
+        android:imeOptions="actionGo"/>
+
+    <TextView
+        android:id="@+id/KMH"
+        android:layout_margin="25dp"
+        android:layout_alignBaseline="@+id/kmh"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="km/h"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/ms"
+        android:layout_margin="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kmh"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/MS"
+        android:hint="Meters per sec"
+        android:inputType="numberDecimal"
+        android:onClick="msConvert"
+        android:imeOptions="actionGo"/>
+
+    <TextView
+        android:id="@+id/MS"
+        android:layout_margin="25dp"
+        android:layout_alignBaseline="@+id/ms"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kmh"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="m/s"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/mph"
+        android:layout_margin="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ms"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/MPH"
+        android:hint="Miles per hour"
+        android:inputType="numberDecimal"
+        android:onClick="mphConvert"
+        android:imeOptions="actionGo"/>
+
+    <TextView
+        android:id="@+id/MPH"
+        android:layout_margin="25dp"
+        android:layout_alignBaseline="@+id/mph"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ms"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="MPH"
+        android:textSize="18sp" />
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_below="@id/mph"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="hideKeyboard"/>
+
+
+</RelativeLayout>
